@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    'use strict';
+    let socket = io();
+
+    let object = {
+      name: 'Sean',
+      sexual_preference: 'Often'
+
+      }
+    socket.emit('new', object);
+
+    socket.on('response', function(msg) {
+      console.log(msg);    
+    });
+  </script>
+
+
+
+
+</body>
+</html>
